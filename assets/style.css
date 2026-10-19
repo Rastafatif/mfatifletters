@@ -143,3 +143,4 @@ a:hover { text-decoration: underline; }
 .source a:hover { text-decoration: none; }
 .back { display: inline-block; margin-bottom: 24px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
 .stats + h2 { border-top: 0 !important; padding-top: 0 !important; }
+html { scroll-behavior: smooth; } .article[id] { scroll-margin-top: 24px; }
