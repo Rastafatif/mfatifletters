@@ -7,18 +7,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=202610271612">
+  <link rel="stylesheet" href="assets/style.css?v=202610271624">
 </head>
 <body id="top">
   <section class="hero">
     <canvas aria-hidden="true"></canvas>
-    <div class="hero-bar">
-      <a class="hero-name" href="index.html">mfatif letters</a>
-      <nav class="hero-nav">
-        <a href="index.html" class="active">Letters</a>
+    <header class="top">
+      <a class="name" href="index.html">mfatif letters</a>
+      <nav class="menu">
+        <a href="index.html#letters" class="active">Letters</a>
         <a href="about.html">About me</a>
       </nav>
-    </div>
+    </header>
     <div class="hero-text">
       <h1>Headline goes here &mdash; one or two lines about who you are and what you write.</h1>
       <p>First short line.<br>Second short line.<br>Third short line.</p>
@@ -27,48 +27,32 @@
     <a class="hero-down" href="#letters" aria-label="Scroll to letters">&darr;</a>
   </section>
 
-  <div class="wrap">
-    <main>
-      <div class="section-title" id="letters"><h2>Letters</h2><span>Latest first</span></div>
+  <main class="page" id="letters">
+    <h2 class="section-head">Letters</h2>
+    <!-- One <li> per piece of writing, newest first. Each title links to its own page in letters/. -->
+    <ul class="letters">
+      <li>
+        <span class="date">Date &middot; Category</span>
+        <a href="letters/example-project.html">Example project title</a>
+        <p>One-line summary of the piece.</p>
+      </li>
+      <li>
+        <span class="date">Date &middot; Category</span>
+        <a href="letters/example-project.html">Second piece title</a>
+        <p>One-line summary of the piece.</p>
+      </li>
+      <li>
+        <span class="date">Date &middot; Category</span>
+        <a href="letters/example-project.html">Third piece title</a>
+        <p>One-line summary of the piece.</p>
+      </li>
+    </ul>
+  </main>
 
-      <!-- Featured (newest) letter -->
-      <article class="feature">
-        <a href="letters/sample-letter.html" class="thumb"></a>
-        <div>
-          <div class="meta">Date &middot; Category</div>
-          <h2><a href="letters/sample-letter.html">Featured letter title</a></h2>
-          <p>Short summary of the letter.</p>
-          <a class="more" href="letters/sample-letter.html">Read</a>
-        </div>
-      </article>
-
-      <!-- All other letters: copy one <article class="card"> block per letter -->
-      <section class="grid">
-        <article class="card">
-          <a href="letters/sample-letter.html" class="thumb"></a>
-          <div class="meta">Date &middot; Category</div>
-          <h2><a href="letters/sample-letter.html">Letter title</a></h2>
-          <p>Short summary of the letter.</p>
-        </article>
-        <article class="card">
-          <a href="letters/sample-letter.html" class="thumb"></a>
-          <div class="meta">Date &middot; Category</div>
-          <h2><a href="letters/sample-letter.html">Letter title</a></h2>
-          <p>Short summary of the letter.</p>
-        </article>
-        <article class="card">
-          <a href="letters/sample-letter.html" class="thumb"></a>
-          <div class="meta">Date &middot; Category</div>
-          <h2><a href="letters/sample-letter.html">Letter title</a></h2>
-          <p>Short summary of the letter.</p>
-        </article>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <span>&copy; 2026 mfatifletters</span>
-      <a href="#top">Back to top &uarr;</a>
-    </footer>
-  </div>
-  <script src="assets/hero.js?v=202610271612"></script>
+  <footer class="foot">
+    <a href="#top">&uarr; Back to top</a>
+    <span>&copy; 2026 mfatifletters</span>
+  </footer>
+  <script src="assets/hero.js?v=202610271624"></script>
 </body>
 </html>
