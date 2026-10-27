@@ -75,6 +75,7 @@ b, strong { font-weight: 700; }
 .rundown h2 { font-size: 40px; font-weight: 400; color: var(--grey); letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 28px; }
 .rundown ul { list-style: none; margin: 0; padding: 0; }
 .rundown li { margin: 0 0 4px; }
+.rundown .none { color: var(--grey); }
 
 /* About page portrait */
 .portrait { aspect-ratio: 3 / 4; background: var(--empty); position: relative; overflow: hidden; }
