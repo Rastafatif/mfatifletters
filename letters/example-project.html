@@ -6,12 +6,13 @@
   <title>Example project — mfatifletters</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/style.css?v=202610271624">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css?v=202610271630">
 </head>
 <body id="top">
   <header class="top">
-    <a class="name" href="../index.html">mfatif letters</a>
+    <a class="name" href="../index.html"><b>mfatif</b> letters</a>
+    <span class="crumb">Example project title</span>
     <nav class="menu">
       <a href="../index.html#letters" class="active">Letters</a>
       <a href="../about.html">About me</a>
@@ -19,12 +20,18 @@
   </header>
 
   <!-- Template for one piece of writing. Copy this file to letters/<new-name>.html for each new piece. -->
-  <main class="page">
-    <a class="back" href="../index.html#letters">&larr; All letters</a>
-    <p class="meta">Date &middot; Category</p>
-    <h1>Example project title</h1>
-    <div class="prose">
-      <p class="lead">An opening paragraph that sets up the question or idea of the piece in two or three sentences.</p>
+  <main class="layout">
+    <aside class="side">
+      <dl>
+        <dt>Date</dt><dd>Day Month Year</dd>
+        <dt>Subject</dt><dd>Category one<br>Category two</dd>
+        <dt>Originally posted</dt><dd><a href="#">LinkedIn</a></dd>
+      </dl>
+      <a class="back" href="../index.html#letters">&larr; All letters</a>
+    </aside>
+    <article class="body">
+      <h1>Example project title</h1>
+      <p>An opening paragraph that sets up the question or idea of the piece. Use <b>bold</b> for names of people or places, and <i>italics</i> for titles of works, projects or exhibitions.</p>
       <p>Body text. Write as you would in a letter &mdash; plain, direct sentences. Links look like <a href="#">this underlined text</a>.</p>
 
       <h2>A section heading</h2>
@@ -38,8 +45,7 @@
       <h2>Another section</h2>
       <p>Closing thoughts.</p>
       <blockquote>A question or quote you want readers to remember.</blockquote>
-      <p class="meta">Originally posted on <a href="#">LinkedIn</a></p>
-    </div>
+    </article>
   </main>
 
   <footer class="foot">
