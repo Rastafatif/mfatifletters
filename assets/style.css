@@ -12,6 +12,7 @@
   --gutter: 38px;
   --side: 300px;          /* left details column */
   --body: 1120px;         /* max width of the main text column */
+  --lean: max(var(--gutter), 8vw); /* left edge of the hero text and Letters list */
   --sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -70,7 +71,7 @@ b, strong { font-weight: 700; }
 .body blockquote { margin: 36px 0; padding-left: 24px; border-left: 2px solid var(--teal); font-style: italic; }
 
 /* Letters run-down (main page): a heading and one underlined line per piece */
-.rundown { padding: 64px var(--gutter) 72px calc(var(--gutter) + var(--side) + 48px); }
+.rundown { padding: 64px var(--gutter) 72px var(--lean); }
 .rundown h2 { font-size: 40px; font-weight: 400; color: var(--grey); letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 28px; }
 .rundown ul { list-style: none; margin: 0; padding: 0; }
 .rundown li { margin: 0 0 4px; }
@@ -103,13 +104,15 @@ b, strong { font-weight: 700; }
 .hero .top::after { background: rgba(255, 255, 255, .45); }
 .hero .menu a.active, .hero .menu a:hover { text-decoration-color: #fff; }
 .hero-text {
-  margin: auto 0; padding: 40px var(--gutter) 40px calc(var(--gutter) + var(--side) + 48px);
-  max-width: calc(var(--gutter) + var(--side) + 48px + 900px);
+  margin: auto 0; padding: 40px var(--gutter) 40px var(--lean);
+  max-width: calc(var(--lean) + 1200px);
   text-shadow: 0 1px 18px rgba(0, 10, 50, .3); cursor: auto;
 }
-.hero-text h1 { font-size: 40px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 32px; }
-.hero-text p { margin: 0 0 28px; }
-.hero-down { align-self: flex-start; margin: 0 0 32px var(--gutter); font-size: 30px; line-height: 1; text-decoration: none; }
+.hero-text .kicker { margin: 0 0 6px; }
+.hero-text h1 { font-size: 40px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
+.hero-rule { display: block; width: 2px; height: clamp(90px, 18vh, 170px); background: rgba(255, 255, 255, .85); margin: 24px 0 20px; }
+.hero-text p { margin: 0; }
+.hero-down { align-self: flex-start; margin: 0 0 32px var(--lean); font-size: 30px; line-height: 1; text-decoration: none; }
 .hero-down:hover { transform: translateY(3px); }
 
 @media (max-width: 1100px) {
@@ -125,7 +128,6 @@ b, strong { font-weight: 700; }
   .layout { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 32px; }
   .side dd { margin-bottom: 12px; }
   .body h1, .hero-text h1 { font-size: 30px; }
-  .hero-text, .rundown { padding-left: var(--gutter); }
   .rundown h2 { font-size: 30px; }
   .about .portrait { max-width: 260px; }
 }
