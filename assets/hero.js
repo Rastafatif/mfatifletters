@@ -20,6 +20,7 @@
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     w = hero.clientWidth; h = hero.clientHeight;
     canvas.width = w * dpr; canvas.height = h * dpr;
+    canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     size = Math.max(40, Math.min(90, w / 24));
     cols = Math.ceil(w / size); rows = Math.ceil(h / size);
