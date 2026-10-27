@@ -1,11 +1,11 @@
 # mfatifletters
 
-A three-page black & white blog site (Letters, About me, Projects), styled after the
+A simple black & white blog on GitHub Pages, laid out after the
 [Socks Studio visual atlas](https://socks-studio.com/category/visual-atlas/sounds/).
-Plain HTML + CSS, no build step — hosted with GitHub Pages.
 
-- `index.html` — main page (letters)
-- `about.html` — about me
-- `projects.html` — projects
+- `index.html` — **Letters**: every piece of writing, as a featured letter plus a grid of cards
+- `about.html` — **About me**
+- `letters/` — one page per letter (`sample-letter.html` is the template to copy)
 - `assets/style.css` — all styling
-- `assets/thumbs.js` — black & white placeholder artwork (swap for real `<img>` tags)
+
+To add a letter: copy `letters/sample-letter.html`, fill it in, then add a card in `index.html` linking to it.
